@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #141225;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.inform-background {
+    margin: 0 2rem;
+}
+
+.inform-background,
+.inlogin-form {
+    width: 25rem;
+    height: 30rem;
+    max-width: 320px;
+    position: relative;
+}
+
+.circle {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle:first-child {
+    background: linear-gradient(#ff0060, #c302b5);
+    left: -20%;
+    top: -12%;
+}
+
+.circle:nth-child(2) {
+    background: linear-gradient(164deg, #144e7cfc, #1877f2);
+    right: -22%;
+    bottom: -14%;
+}
+
+.inlogin-form form {
+    top: 50%;
+    left: 50%;
+    width: 16rem;
+    height: 24rem;
+    max-width: 320px;
+    position: absolute;
+    padding: 50px 35px;
+    background-color: rgba(255, 255, 255, 0.13);
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(5px);
+}
+
+form * {
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+}
+
+.input-group label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.input-group input {
+    margin-top: 8px;
+    padding: 0 10px;
+    width: 92%;
+    height: 50px;
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, .07);
+}
+
+::placeholder {
+    color: #e5e5e5;
+}
+
+.submit-form {
+    width: 100%;
+    margin-top: 30px;
+    background: salmon;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.submit-form::before {
+    content: '';
+    top: 0%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: absolute;
+    border-radius: 5px;
+    transition: left 0.4s, color 0.4s;
+    background-color: #202020;
+    z-index: -1;
+}
+
+.submit-form:hover {
+    color: #fff;
+}
+
+.submit-form:hover::before {
+    left: 0%;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.social > a {
+    background: rgba(255, 255, 255, .13);
+    padding: 13px 15px;
+    border-radius: 50%;
+    transition: all color .4s;
+}
+
+.social > a:hover {
+    background: rgba(255, 255, 255, .4);
+}
